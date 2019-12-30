@@ -11,7 +11,7 @@
     <h4>here also Read|Get for single item in the form</h4>
   </div>
 
-  <button type="button" onclick="location.href = '/shuki.html'">to Shuki</button>
+  <button type="button" onclick="location.href = '/shuki.html'">backj to Shuki</button>
 
 
   <div>
@@ -29,9 +29,9 @@
 
 
   <form>
-    <label>id</label><input id="id"><br>
-    <label>name</label><input id="name"><br>
-    <label>age</label><input id="age"><br>
+    <label>id</label> <input id="id"><br>
+    <label>name</label> <input id="name"><br>
+    <label>age</label> <input id="age"><br>
     <button type="button" onclick="submitty()">submit</button>
   </form>
 
@@ -41,16 +41,17 @@
 
     function submitty() {
       let id = document.getElementById("id").value
-      let data = {},
-        method = "POST",
-        url = "http://localhost:3000/shuki-personal"
+      let method = "POST", url = "http://localhost:3000/shuki-personal"
       if (id) {
         method = "PUT"
         url += "/" + id
       }
 
-      data.name = document.getElementById("name").value
-      data.age = parseInt(document.getElementById("age").value)
+      let data = {
+        name: document.getElementById("name").value,
+        age: parseInt(document.getElementById("age").value)
+        //age: document.getElementById("age").value
+      }
 
       var x = new XMLHttpRequest();
       x.onreadystatechange = function () {

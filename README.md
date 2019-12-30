@@ -104,6 +104,9 @@ you can change `mysql` to your dbname
 
 `lb4 repository` will require you to choose a datasource and 1 or more models, and what service (default CRUD operations service). As stated, just tapes them all together.
 
+#### How to add new table or model to an existing datasource in LoopBack4
+
+This is also the case for adding new tables/models to an existing datasource, `lb4 repository`, choose the datasource, and re-attach all relevant model/s
 
 
 ## Controller
