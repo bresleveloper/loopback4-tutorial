@@ -96,3 +96,24 @@ you can change `mysql` to your dbname
 
 
 
+## Repository
+
+`lb4 repository` will require you to choose a datasource and 1 or more models, and what service (default CRUD operations service). As stated, just tapes them all together.
+
+
+
+## Controller
+
+`lb4 controller` will now allow you to choose `REST Controller with CRUD functions` and will auto-gen a controller accordingly.
+
+You get a bonus `count` endpoint
+
+
+
+# How to consume?
+
+In our repo, in `public` folder we have some extra html pages that demonstrates the consuming of our new REST API
+
+
+
+
