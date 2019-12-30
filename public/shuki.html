@@ -8,6 +8,7 @@
   <div class="info">
     <h1>shuki show all</h1>
     <h2>here Read|Get, Delete|Delete</h2>
+    <h4>Read|Get for single item in the form</h4>
     <h2>click and item for Create|Post, Update|Put</h2>
   </div>
 
@@ -67,6 +68,13 @@
 
     getPersonalDataForDialog = r => {
       let id = r.querySelector('td').textContent
+
+
+      //window.open('/shuki form.html?id=' + id)
+      location.href = '/shuki form.html?id=' + id
+
+
+
       var x = new XMLHttpRequest();
       x.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {

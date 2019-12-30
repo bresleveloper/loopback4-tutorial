@@ -36,7 +36,7 @@ once we configure the model and datasource correctly vs the db, the controller s
 
 In the CLI enter `lb4 model`, and answer the questions. You currently ask for and `Entity` type model.
 
-Once you to property generation, you can slowly but surely enter all your props names (db column names) that you desire in a CRUD operation. If its really long you can make a few chosen ones and copy-paste from the generated `.model.ts.` file
+For property generation, you can slowly but surely enter all your props names (db column names) that you desire in a CRUD operation. If its really long you can make a few chosen ones and copy-paste from the generated `.model.ts` file
 
 ```
   @property({
@@ -52,11 +52,15 @@ Once you to property generation, you can slowly but surely enter all your props 
   age: number;
 ```
 
+To "finish" just press enter, empty field
+
 ## DataSource
 
 Next you can now build a datasource to connect a model with a db-connector.
 
-When running `lb4 datasource` you will be asked for all the credentials for the datasource.
+When running `lb4 datasource` you will be asked for all the credentials for the datasource. The DataSourceName is arbitrary.
+
+When asked `Connection string url...` choose `n`
 
 #### Notice that he saves the password in clear text in the generated `.datasource.config.json` file. consult your Security Dept.
 
@@ -108,12 +112,23 @@ you can change `mysql` to your dbname
 
 You get a bonus `count` endpoint
 
+### filtering
+
+The controller also provides filtering capabilities like `http://localhost:3000/shuki-personal?filter[where][id]=5`. [read more](https://loopback.io/doc/en/lb2/Querying-data.html)
 
 
 # How to consume?
 
+`npm start` to start the solution.
+
 In our repo, in `public` folder we have some extra html pages that demonstrates the consuming of our new REST API
 
+
+# More
+
+[db docs ref](https://loopback.io/doc/en/lb4/Database-connectors.html)
+
+[filtering](https://loopback.io/doc/en/lb2/Querying-data.html)
 
 
 
