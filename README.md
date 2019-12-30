@@ -124,6 +124,20 @@ The controller also provides filtering capabilities like `http://localhost:3000/
 In our repo, in `public` folder we have some extra html pages that demonstrates the consuming of our new REST API
 
 
+### Add Content-Type Header
+With the `get` requests its not mandatort but for the rest it is
+
+JS Vannila ex. : `xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8')`
+
+send data stringifyied `xhr.send(JSON.stringify(data));`
+
+dont forget to `parseInt` numeric values before stringifying
+
+
+
+
+
+
 # More
 
 [db docs ref](https://loopback.io/doc/en/lb4/Database-connectors.html)
